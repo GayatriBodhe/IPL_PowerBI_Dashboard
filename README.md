@@ -11,6 +11,10 @@
 
 ## 📸 Dashboard Preview
 
+<img width="400" height="220" alt="Screen Recording 2026-04-28 105557" src="https://github.com/user-attachments/assets/f0a45374-9958-4bef-a9dd-2639143ce6ae" />
+
+> *Video Preview for season slicer working dynamically for images, points table, players, and Champion stats
+
 <img width="674" height="372" alt="image" src="https://github.com/user-attachments/assets/ab6def26-bb5c-48f1-b8cd-26acd1c92bc2" />
 
 
