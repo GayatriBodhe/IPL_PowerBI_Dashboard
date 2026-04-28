@@ -629,40 +629,21 @@ IPL Season =
 | `teams_data` | Dimension | `team_name`, `team_id`, `image_url` |
 
 **Relationships:**
-- `ball_by_ball_data[match_id]` → `ipl_matches_data[match_id]` (Many-to-One)
-- `players-data-updated[player_id]` → `ipl_matches_data` (One-to-Many)
+- `ipl_matches_data[match_id]` → `ball_by_ball_data[match_id]` (One-to-Many)
+- `players-data-updated[player_id]` → `ipl_matches_data[player_of_match]` (One-to-Many)
 - `teams_data[team_name]` → `ipl_matches_data[team1/team2/match_winner]` (One-to-Many)
 
 *All measures are season-context aware — they filter automatically based on the IPL Season slicer selection.*
 
-### Dynamic Image Rendering
+### 🖼️ Dynamic Image Rendering
 - Player and team images are loaded via **URL-based image columns** in the data model
 - Conditional rendering ensures the correct player image appears per season without manual filtering
 
 ---
 
-## 📁 Repository Structure
-
-```
-IPL-Analysis-PowerBI/
-│
-├── 📂 dataset/
-│   ├── matches.csv           # Match-level data 2008–2025
-│   ├── deliveries.csv        # Ball-by-ball delivery data
-│   └── players.csv           # Player metadata + image URLs
-│
-├── 📂 assets/
-│   └── dashboard_preview.png # Screenshot of the dashboard
-│
-├── 📄 IPL_Analysis.pbix      # Power BI Desktop file
-└── 📄 README.md
-```
-
----
-
 ## 📦 Data Source
 
-- Dataset sourced from https://drive.google.com/drive/folders/1OS0t10CvR_SgLB-DpqoLHCOr66dIIxO7 .
+- Dataset files (Excel) and images sourced from a shared Drive folder — [Click here to access](https://drive.google.com/drive/folders/1OS0t10CvR_SgLB-DpqoLHCOr66dIIxO7).
 - Player images sourced from publicly available IPL/ESPN Cricinfo URLs
 
 ---
